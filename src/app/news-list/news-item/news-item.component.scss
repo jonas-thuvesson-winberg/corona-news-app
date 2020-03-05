@@ -1,0 +1,51 @@
+:host {
+  position: relative;
+  max-width: 100%;
+}
+
+.container {
+  position: relative;
+  background: rgb(248, 248, 248);
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 40px;
+  max-width: 90%;
+  width: 900px;
+  overflow: hidden;
+
+  overflow-wrap: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
+
+  .heading {
+    word-break: keep-all;
+    position: relative;
+    width: 100%;
+    margin: 10px auto;
+
+    .title {
+      position: relative;
+      display: block;
+    }
+
+    .publish-date {
+      position: relative;
+      display: block;
+      font-size: 0.7em;
+    }
+  }
+
+  .image {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .content {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+}

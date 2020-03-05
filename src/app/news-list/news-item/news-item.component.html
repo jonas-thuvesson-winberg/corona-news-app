@@ -1,0 +1,9 @@
+<div class="container">
+    <h1 class="heading">
+        <span class="title">{{article.title}}</span>
+        <span class="publish-date">{{article.publishedAt | date:'medium'}}</span>
+    </h1>
+    <img class="image" [src]="article.urlToImage" />
+    <p class="content">{{article.content}}</p>
+    <a [href]="article.url">read more</a>
+</div>
