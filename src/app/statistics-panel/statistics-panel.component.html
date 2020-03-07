@@ -1,3 +1,51 @@
-<div class="container">
-    {{data}}
+<div *ngIf="!!data && !!countryData" class="container">
+
+    <h1>Statistics</h1>
+    <hr>
+    <div>
+        <table>
+            <tr>
+                <td><strong>cases:</strong></td>
+                <td>{{data.cases}}</td>
+            </tr>
+            <tr>
+                <td><strong>deaths:</strong></td>
+                <td>{{data.deaths}}</td>
+            </tr>
+            <tr>
+                <td><strong>recovered:</strong></td>
+                <td>{{data.recovered}}</td>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <div class="countries">
+        <table>
+            <tr class="table-header">
+                <th><strong>country</strong></th>
+                <th><strong>cases</strong></th>
+                <th><strong>new cases (today)</strong></th>
+                <th><strong>deaths</strong></th>
+                <th><strong>new deaths (today)</strong></th>
+                <th><strong>recoveries</strong></th>
+                <th><strong>critical</strong></th>
+            </tr>
+            <tr class="country" *ngFor="let country of countryData">
+                <td>{{country.country}}</td>
+                <td>{{country.cases}}</td>
+                <td>{{country.todayCases}}</td>
+                <td>{{country.deaths}}</td>
+                <td>{{country.todayDeaths}}</td>
+                <td>{{country.recovered}}</td>
+                <td>{{country.critical}}</td>
+            </tr>
+        </table>
+    </div>
+    <!-- country: "China"
+    cases: 80652
+    todayCases: 0
+    deaths: 3070
+    todayDeaths: 0
+    recovered: 55529
+    critical: 0 -->
 </div>

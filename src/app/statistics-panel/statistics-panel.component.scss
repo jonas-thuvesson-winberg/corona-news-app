@@ -2,7 +2,7 @@
   float: left;
   display: block;
   position: relative;
-  width: 35%;
+  width: 50%;
 }
 
 .container {
@@ -12,5 +12,12 @@
   margin: 30px auto;
   width: 90%;
   position: relative;
-  padding: 100px;
+  padding: 20px;
+}
+
+.countries {
+  .table-header {
+    vertical-align: top;
+    text-align: left;
+  }
 }
