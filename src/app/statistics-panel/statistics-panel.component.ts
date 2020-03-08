@@ -15,14 +15,16 @@ export class StatisticsPanelComponent implements OnInit {
 
   ngOnInit() {
     this.http
-      .get("https://sleepy-reef-17157.herokuapp.com/all")
+      .get("https://glacial-escarpment-56967.herokuapp.com/all")
+      // .get("http://localhost:3000/all")
       .subscribe(data => {
         console.log(data);
         this.data = data;
       });
 
     this.http
-      .get("https://sleepy-reef-17157.herokuapp.com/countries")
+      .get("https://glacial-escarpment-56967.herokuapp.com/countries")
+      // .get("http://localhost:3000/countries")
       .subscribe(d => {
         console.log(d);
         this.countryData = d;

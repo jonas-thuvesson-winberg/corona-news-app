@@ -22,6 +22,8 @@
 }
 
 .countries {
+  overflow-x: scroll;
+
   .table-header {
     vertical-align: top;
     text-align: left;
