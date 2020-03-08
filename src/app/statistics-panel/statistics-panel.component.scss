@@ -3,6 +3,12 @@
   display: block;
   position: relative;
   width: 50%;
+
+  @media only screen and (max-width: 1000px) {
+    width: 100%;
+    float: none;
+    clear: both;
+  }
 }
 
 .container {
