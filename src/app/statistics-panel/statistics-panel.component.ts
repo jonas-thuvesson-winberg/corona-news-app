@@ -14,14 +14,18 @@ export class StatisticsPanelComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get("http://localhost:3000/all").subscribe(data => {
-      console.log(data);
-      this.data = data;
-    });
+    this.http
+      .get("https://sleepy-reef-17157.herokuapp.com/all")
+      .subscribe(data => {
+        console.log(data);
+        this.data = data;
+      });
 
-    this.http.get("http://localhost:3000/countries").subscribe(d => {
-      console.log(d);
-      this.countryData = d;
-    });
+    this.http
+      .get("https://sleepy-reef-17157.herokuapp.com/countries")
+      .subscribe(d => {
+        console.log(d);
+        this.countryData = d;
+      });
   }
 }

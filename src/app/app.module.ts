@@ -21,7 +21,7 @@ import { NewsApiMockService } from "./services/news-api.mock-service";
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [
-    { provide: NewsApiServiceContract, useClass: NewsApiMockService },
+    { provide: NewsApiServiceContract, useClass: NewsApiService },
     HttpClient
   ],
   bootstrap: [AppComponent]
