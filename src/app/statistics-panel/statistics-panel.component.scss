@@ -1,13 +1,14 @@
 :host {
-  float: left;
-  display: block;
   position: relative;
+  // display: inline-block;
   width: 50%;
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1670px) {
+    width: 65%;
+  }
+
+  @media only screen and (max-width: 1260px) {
     width: 100%;
-    float: none;
-    clear: both;
   }
 }
 
@@ -22,10 +23,34 @@
 }
 
 .countries {
+  margin-top: 50px;
   overflow-x: scroll;
 
-  .table-header {
-    vertical-align: top;
-    text-align: left;
+  .table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+
+    th {
+      border-bottom: 1px solid;
+    }
+
+    th,
+    td {
+      white-space: nowrap;
+      margin: 0;
+      padding: 10px;
+      text-align: left;
+      // backgrou nd: green;
+      border-right: 1px solid black;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    .table-header {
+      vertical-align: top;
+      text-align: left;
+    }
   }
 }

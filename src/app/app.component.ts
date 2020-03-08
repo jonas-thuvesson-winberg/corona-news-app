@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+
+type Page = "statistics" | "news";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = 'corona-news';
+  currentMobilePage: Page = "statistics";
+
+  moveToPage(page: Page): void {
+    this.currentMobilePage = page;
+  }
 }

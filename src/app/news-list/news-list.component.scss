@@ -1,12 +1,13 @@
 :host {
   position: relative;
-  // max-width: 100%;
+  top: 0px;
   width: 50%;
-  float: right;
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1670px) {
+    width: 35%;
+  }
+
+  @media only screen and (max-width: 1260px) {
     width: 100%;
-    float: none;
-    clear: both;
   }
 }

@@ -1,3 +1,16 @@
-<app-statistics-panel></app-statistics-panel>
-<app-news-list></app-news-list>
-<!-- <app-footer></app-footer> -->
+<div class="page-wrapper">
+    <div class="mobile-top-nav">
+        <button [ngClass]="{'active': currentMobilePage === 'statistics'}" (click)="moveToPage('statistics')"
+            class="nav-button left">statistics</button>
+        <button [ngClass]="{'active': currentMobilePage === 'news'}" (click)="moveToPage('news')"
+            class="nav-button right">news</button>
+    </div>
+
+    <div class="pages">
+        <app-statistics-panel class="page" [ngClass]="{'current-mobile-page': currentMobilePage === 'statistics'}">
+        </app-statistics-panel>
+        <app-news-list class="page" [ngClass]="{'current-mobile-page': currentMobilePage === 'news'}"></app-news-list>
+    </div>
+
+</div>
+<app-footer></app-footer>

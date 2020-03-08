@@ -2,3 +2,69 @@
   position: relative;
   max-width: 70%;
 }
+
+.page-wrapper {
+  position: relative;
+}
+
+.pages {
+  display: flex;
+}
+
+.mobile-top-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 1260px) {
+  .mobile-top-nav {
+    display: block;
+    margin: 20px auto;
+    width: 360px;
+    min-width: 360px;
+
+    .nav-button {
+      color: black;
+      font-size: 1.2rem;
+      background-color: #f8f8f8;
+      display: inline-block;
+      padding: 20px;
+      margin: 10px 30px;
+      border: none;
+      width: 150px;
+
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+      // transition: color 3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.left {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-right: 0;
+        padding-left: 40px;
+      }
+
+      &.right {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-left: 0;
+        padding-right: 40px;
+      }
+
+      &.active {
+        background-color: #a1a1a1;
+        color: white;
+      }
+    }
+  }
+
+  .page {
+    display: none;
+
+    &.current-mobile-page {
+      display: block;
+    }
+  }
+}
